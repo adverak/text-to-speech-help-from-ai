@@ -8,8 +8,7 @@ What problems?
 I will add more to it
 
 what can do
-1:sing
-2:says what time it is
+1:sing                                                                                                                                                                                                                                                                      2:says what time it is
 3:it can tell you a joke
 4:spell words
 5:it stops if you say goodbye
