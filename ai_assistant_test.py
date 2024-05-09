@@ -15,7 +15,7 @@ def load_responses(filename):
     return responses
 
 # Load responses from the text file
-responses = load_responses('assistant_in_Python/responses.txt')
+responses = load_responses('responses.txt')
 
 # Initialize the text-to-speech engine
 engine = pyttsx3.init()
