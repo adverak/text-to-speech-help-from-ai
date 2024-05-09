@@ -6,24 +6,19 @@ import os
 import subprocess
 import platform
 
+def load_responses(filename):
+    responses = {}
+    with open(filename, 'r') as file:
+        for line in file:
+            key, value = line.strip().split(': ', 1)
+            responses[key] = value
+    return responses
+
+# Load responses from the text file
+responses = load_responses('assistant_in_Python/responses.txt')
+
 # Initialize the text-to-speech engine
 engine = pyttsx3.init()
-
-# Define responses for different words or phrases
-responses = {
-    "hello": "Hello! How can I help you?",
-    "how are you": "I'm doing well, thank you for asking.",
-    "goodbye": "Goodbye! Have a great day!",
-    "thank you": "You're welcome!",
-    "what's the weather like": "The weather is sunny with a high of 75 degrees Fahrenheit.",
-    "tell me a joke": "Why don't scientists trust atoms? Because they make up everything!",
-    "open the pod bay doors": "I'm sorry, Dave. I'm afraid I can't do that.",
-    "what time is it": datetime.now().strftime("%I:%M %p"),
-    "sing a song": "Sure! Let's sing a song!",
-    "uwu": "uwu, are you for me to pet?",
-    "how old are you": "I am as old as the computer I'm running on."
-    # Add more responses as needed
-}
 
 # Define the lyrics of the song
 lyrics = [
